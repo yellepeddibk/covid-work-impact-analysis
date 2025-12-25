@@ -1,9 +1,7 @@
 
 # Final Project
 
-### **Authors:** Bhargav Yellepeddi, Amaya Bayoumi, Ananya Ramji, Neel Rajan
-
-**Date:** December 17, 2024
+#### **Team Lead: Bhargav Yellepeddi**<br>Associates: Amaya Bayoumi, Ananya Ramji, Neel Rajan
 
 ## Load and visualize data
 
@@ -13,7 +11,7 @@ data <- read_csv("../data/covid_impact_on_work.csv")
 ```
 
     ## Rows: 10000 Columns: 15
-    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────────────────────
+    ## ── Column specification ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr  (4): Stress_Level, Sector, Hours_Worked_Per_Day, Meetings_Per_Day
     ## dbl (11): Increased_Work_Hours, Work_From_Home, Productivity_Change, Health_...
@@ -363,11 +361,6 @@ ggplot(data, aes(x = factor(Productivity_Change, levels = c(0, 1), labels = c("N
   theme_minimal()
 ```
 
-    ## Warning: The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
-    ## ℹ Please use `after_stat(count)` instead.
-    ## This warning is displayed once every 8 hours.
-    ## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.
-
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ## Analysis
@@ -507,6 +500,7 @@ ggplot(sector_analysis, aes(x = reorder(Sector, -Average_Productivity_Change), y
     ## 4 Retail                           0.496                          0  2472
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
 The analysis reveals consistent productivity changes across sectors,
 with average values ranging narrowly from 0.496 (Retail) to 0.508
 (Education). Education and IT demonstrate slightly higher productivity
@@ -610,9 +604,22 @@ if (all(c("Sector", "Work_From_Home", "Productivity_Change") %in% colnames(data)
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->![](../reports/analysis_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->
 
-``` r
-# The analysis shows that productivity trends vary by sector and work arrangement. In Education and IT, employees working on-site exhibit slightly higher productivity, likely due to the collaborative and interactive nature of tasks in these sectors. In contrast, Healthcare and Retail benefit more from remote work, with remote employees showing higher productivity. This is particularly evident in Retail, where remote work roles (e.g., e-commerce or customer service) outperform on-site roles, which may face challenges like reduced foot traffic or operational constraints. Median productivity remains consistent across most groups, except for on-site employees in Healthcare and Retail, where it drops to 0, highlighting potential struggles in these scenarios. These findings suggest that while remote work enhances productivity in some sectors, Education and IT may benefit from hybrid models to balance collaboration and flexibility. Retail operations could focus on supporting on-site employees to mitigate productivity challenges.
-```
+The analysis shows that productivity trends vary by sector and work
+arrangement. In Education and IT, employees working on-site exhibit
+slightly higher productivity, likely due to the collaborative and
+interactive nature of tasks in these sectors. In contrast, Healthcare
+and Retail benefit more from remote work, with remote employees showing
+higher productivity. This is particularly evident in Retail, where
+remote work roles (e.g., e-commerce or customer service) outperform
+on-site roles, which may face challenges like reduced foot traffic or
+operational constraints. Median productivity remains consistent across
+most groups, except for on-site employees in Healthcare and Retail,
+where it drops to 0, highlighting potential struggles in these
+scenarios. These findings suggest that while remote work enhances
+productivity in some sectors, Education and IT may benefit from hybrid
+models to balance collaboration and flexibility. Retail operations could
+focus on supporting on-site employees to mitigate productivity
+challenges.
 
 #### Question 3: What is the impact of working from home on productivity change? - Childcare Responsibilities & Working from Home
 
@@ -677,9 +684,19 @@ if (all(c("Childcare_Responsibilities", "Work_From_Home", "Productivity_Change")
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->![](../reports/analysis_files/figure-gfm/unnamed-chunk-12-2.png)<!-- -->
 
-``` r
-#The analysis shows that employees without childcare responsibilities generally benefit slightly from remote work, with higher average productivity (0.503) compared to those working on-site (0.500). In contrast, employees with childcare responsibilities show slightly lower productivity when working from home (0.501) compared to those not working from home (0.504), likely due to competing demands at home. Median productivity remains consistent across groups, with those managing childcare responsibilities showing a median value of 1 regardless of work arrangement, suggesting that childcare responsibilities do not drastically impact productivity for most employees. Overall, remote work appears more beneficial for employees without childcare responsibilities, while those with childcare may need additional support to balance their responsibilities effectively.
-```
+The analysis shows that employees without childcare responsibilities
+generally benefit slightly from remote work, with higher average
+productivity (0.503) compared to those working on-site (0.500). In
+contrast, employees with childcare responsibilities show slightly lower
+productivity when working from home (0.501) compared to those not
+working from home (0.504), likely due to competing demands at home.
+Median productivity remains consistent across groups, with those
+managing childcare responsibilities showing a median value of 1
+regardless of work arrangement, suggesting that childcare
+responsibilities do not drastically impact productivity for most
+employees. Overall, remote work appears more beneficial for employees
+without childcare responsibilities, while those with childcare may need
+additional support to balance their responsibilities effectively.
 
 #### Question 3: What is the impact of working from home on productivity change? - Health Issues & Working from Home
 
@@ -746,9 +763,22 @@ if (all(c("Health_Issue", "Work_From_Home", "Productivity_Change") %in% colnames
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
-``` r
-# The analysis reveals that remote work has varying impacts on productivity depending on whether employees have health issues. For employees without health issues, those working on-site show a slightly higher average productivity change (0.506) compared to remote workers (0.501), but the difference is minimal, and both groups maintain a median productivity change of 1. In contrast, for employees with health issues, remote work appears to mitigate productivity declines. On-site employees with health issues show a lower average productivity change (0.491) and a median productivity change of 0, whereas remote employees with health issues show an average productivity change of 0.506 and a median of 1. This indicates that remote work provides a more accommodating environment for employees with health issues, helping them achieve similar productivity levels to their counterparts without health issues. Overall, the results suggest that remote work may serve as an effective strategy to support productivity for employees with health-related challenges.
-```
+The analysis reveals that remote work has varying impacts on
+productivity depending on whether employees have health issues. For
+employees without health issues, those working on-site show a slightly
+higher average productivity change (0.506) compared to remote workers
+(0.501), but the difference is minimal, and both groups maintain a
+median productivity change of 1. In contrast, for employees with health
+issues, remote work appears to mitigate productivity declines. On-site
+employees with health issues show a lower average productivity change
+(0.491) and a median productivity change of 0, whereas remote employees
+with health issues show an average productivity change of 0.506 and a
+median of 1. This indicates that remote work provides a more
+accommodating environment for employees with health issues, helping them
+achieve similar productivity levels to their counterparts without health
+issues. Overall, the results suggest that remote work may serve as an
+effective strategy to support productivity for employees with
+health-related challenges.
 
 #### Question 4: Are there significant correlations between productivity_change and other numeric variables?
 
@@ -797,9 +827,18 @@ if (all(c("Stress_Level", "Work_From_Home", "Productivity_Change") %in% colnames
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
-``` r
-#The analysis reveals that employees with medium stress levels benefit the most from remote work, showing a higher average productivity change (0.507) compared to those not working from home (0.484), likely due to the flexibility and work-life balance remote work provides. Conversely, employees with high stress levels experience slightly lower productivity when working remotely (0.495) compared to in-person work (0.525), suggesting they may require more immediate support or structure. For employees with low stress levels, productivity outcomes are relatively balanced between remote (0.501) and in-person work (0.51). Overall, while remote work appears advantageous for those with moderate stress, high-stress employees may benefit from targeted support to thrive in remote environments.
-```
+The analysis reveals that employees with medium stress levels benefit
+the most from remote work, showing a higher average productivity change
+(0.507) compared to those not working from home (0.484), likely due to
+the flexibility and work-life balance remote work provides. Conversely,
+employees with high stress levels experience slightly lower productivity
+when working remotely (0.495) compared to in-person work (0.525),
+suggesting they may require more immediate support or structure. For
+employees with low stress levels, productivity outcomes are relatively
+balanced between remote (0.501) and in-person work (0.51). Overall,
+while remote work appears advantageous for those with moderate stress,
+high-stress employees may benefit from targeted support to thrive in
+remote environments.
 
 #### Question 5: Do employees who experienced salary cuts show different productivity trends compared to those with stable salaries?
 
@@ -844,7 +883,6 @@ if (all(c("Salary_Changes", "Productivity_Change") %in% colnames(data))) {
   
   print("T-test Results:")
   print(t_test_result)
-# The analysis of productivity change based on salary changes shows minimal differences between employees who experienced salary cuts and those with stable salaries. The average productivity change for employees with stable salaries (0.502) is nearly identical to those with salary cuts (0.501). Both groups have a median productivity change of 1, suggesting that the central tendency of productivity is similar across the two groups. A Welch Two-Sample t-test was conducted to compare the means, resulting in a t-value of -0.1154 and a p-value of 0.9081. This high p-value indicates no statistically significant difference in productivity changes between the two groups. The 95% confidence interval (-0.0262, 0.0233) further confirms the lack of meaningful difference. Overall, salary changes appear to have negligible impact on productivity change.
 }
 ```
 
@@ -866,6 +904,20 @@ if (all(c("Salary_Changes", "Productivity_Change") %in% colnames(data))) {
     ## sample estimates:
     ## mean of x mean of y 
     ## 0.5010267 0.5024839
+
+The analysis of productivity change based on salary changes shows
+minimal differences between employees who experienced salary cuts and
+those with stable salaries. The average productivity change for
+employees with stable salaries (0.502) is nearly identical to those with
+salary cuts (0.501). Both groups have a median productivity change of 1,
+suggesting that the central tendency of productivity is similar across
+the two groups. A Welch Two-Sample t-test was conducted to compare the
+means, resulting in a t-value of -0.1154 and a p-value of 0.9081. This
+high p-value indicates no statistically significant difference in
+productivity changes between the two groups. The 95% confidence interval
+(-0.0262, 0.0233) further confirms the lack of meaningful difference.
+Overall, salary changes appear to have negligible impact on productivity
+change.
 
 #### Question 6: What was the impact of Childcare Responsibilities, Commuting Changes, and Health Issues on Technology Adaptation Levels
 
@@ -945,20 +997,51 @@ if (all(c("Childcare_Responsibilities", "Commuting_Changes", "Health_Issue", "Te
 
 ![](../reports/analysis_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
-``` r
-# Employees with childcare responsibilities consistently exhibit slightly higher technology adaptation levels, likely driven by the need to rely on technology for managing tasks at home. Reduced commuting further enhances adaptation, as employees without commuting changes tend to adapt better, likely due to increased time and energy availability. Health issues have mixed effects, with the highest adaptation observed among employees without commuting changes but with health issues (0.628), suggesting that remote work or reduced commuting can support these employees. Conversely, the lowest adaptation (0.588) is seen in employees with health issues and commuting changes, highlighting compounded challenges
-```
+Employees with childcare responsibilities consistently exhibit slightly
+higher technology adaptation levels, likely driven by the need to rely
+on technology for managing tasks at home. Reduced commuting further
+enhances adaptation, as employees without commuting changes tend to
+adapt better, likely due to increased time and energy availability.
+Health issues have mixed effects, with the highest adaptation observed
+among employees without commuting changes but with health issues
+(0.628), suggesting that remote work or reduced commuting can support
+these employees. Conversely, the lowest adaptation (0.588) is seen in
+employees with health issues and commuting changes, highlighting
+compounded challenges
 
 #### Question 7: What are the key takeaways or recommendations based on our analysis?
 
-``` r
-# Our analysis highlights key findings: (1) Remote work supports productivity, especially for employees with health issues, while medium-stress employees see a 4.8% higher productivity boost when working remotely. (2) Education and IT sectors show the highest average productivity changes (0.508 and 0.505, respectively), whereas retail struggles at 0.496. (3) Employees with childcare responsibilities working remotely exhibit slightly lower productivity (0.501 vs. 0.504 on-site). (4) Technology adaptation is highest (0.628) among employees without commuting demands but with health issues.
+Our analysis highlights key findings: (1) Remote work supports
+productivity, especially for employees with health issues, while
+medium-stress employees see a 4.8% higher productivity boost when
+working remotely. (2) Education and IT sectors show the highest average
+productivity changes (0.508 and 0.505, respectively), whereas retail
+struggles at 0.496. (3) Employees with childcare responsibilities
+working remotely exhibit slightly lower productivity (0.501 vs. 0.504
+on-site). (4) Technology adaptation is highest (0.628) among employees
+without commuting demands but with health issues.
 
-# Overall Conclusion/Suggestion: Organizations should adopt hybrid work models that balance flexibility and collaboration, provide targeted sector-specific support, and implement flexible schedules and health accommodations to address diverse employee needs. By prioritizing technology training and supportive policies, businesses can foster a more adaptive, resilient, and productive workforce in the evolving work landscape.
-```
+Overall Conclusion/Suggestion: Organizations should adopt hybrid work
+models that balance flexibility and collaboration, provide targeted
+sector-specific support, and implement flexible schedules and health
+accommodations to address diverse employee needs. By prioritizing
+technology training and supportive policies, businesses can foster a
+more adaptive, resilient, and productive workforce in the evolving work
+landscape.
 
 #### Question 8: What can we improve if this analysis were conducted again?
 
-``` r
-# To improve our data analysis, we can collect more detailed data, such as age or job roles, to better understand patterns. We’ll handle missing data with smarter methods, like estimating based on similar cases, rather than relying on simple averages. Cleaning the data involves standardizing values and checking for overlaps between variables. Using statistical tools like regression and trend analysis, we can explore relationships and patterns over time. By grouping data meaningfully, such as by employee roles or industries, we can uncover unique insights. We’ll enhance visuals with interactive tools and comparisons to make results clearer. Combining survey feedback adds valuable context, while ensuring our data fairly represents all groups avoids bias. By applying machine learning, we can predict outcomes and pinpoint key factors. Finally, we’ll tailor recommendations to specific groups and test ideas incrementally, refining them with stakeholder feedback.
-```
+To improve our data analysis, we can collect more detailed data, such as
+age or job roles, to better understand patterns. We’ll handle missing
+data with smarter methods, like estimating based on similar cases,
+rather than relying on simple averages. Cleaning the data involves
+standardizing values and checking for overlaps between variables. Using
+statistical tools like regression and trend analysis, we can explore
+relationships and patterns over time. By grouping data meaningfully,
+such as by employee roles or industries, we can uncover unique insights.
+We’ll enhance visuals with interactive tools and comparisons to make
+results clearer. Combining survey feedback adds valuable context, while
+ensuring our data fairly represents all groups avoids bias. By applying
+machine learning, we can predict outcomes and pinpoint key factors.
+Finally, we’ll tailor recommendations to specific groups and test ideas
+incrementally, refining them with stakeholder feedback.
