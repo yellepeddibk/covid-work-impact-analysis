@@ -46,10 +46,10 @@ To achieve this objective, we will explore the following questions:
 
 8.  What can we improve if this analysis were conducted again?
 
-These are the primary questions we seek to answer in this final project.
-From the information drawn from these questions, we will be able to
-derive meaningful insights on the best practices to use during Pandmeics
-and better understand how to prepare for them.
+These are the primary questions we seek to answer in this analysis. From
+the information drawn from these questions, we will be able to derive
+meaningful insights on the best practices to use during Pandmeics and
+better understand how to prepare for them.
 
 ## Data
 
@@ -86,8 +86,8 @@ head(data)
 
 #### Overview the Data
 
-First, we will take an overview of the Data to see what aspects needed
-cleaning.
+First, we take an overview of the Data to see what aspects need
+cleaning:
 
 ``` r
 colnames(data) # View the column names to ensure proper references
@@ -196,9 +196,9 @@ they are characters. The binary types, on the other hand, show their
 mean values, which represents the proportion of data that was effected
 in their column. For example, the “Job_Security” column lists a 0.4049
 value for the mean, which means that around 40% of the people in the
-data set experienced and impact or change to their job securities during
-the impact. This indicates that job securtity was more stable than not
-for the average person during the pandemic. In contrast,
+data set experienced an impact or change to their job securities during
+COVID. This indicates that job securtity was more stable than not for
+the average person during the pandemic. In contrast,
 “Team_Collaboration_Challenges” lists a mean value of 0.7006, meaning
 that 70% of people in the dataset experinced team collaboration
 challenges, indicating that this aspect is vulnerable to Pandmeic-like
