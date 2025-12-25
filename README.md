@@ -1,7 +1,7 @@
 
 # Data Analysis of COVID-19’s Impact on Work
 
-#### **Team Lead: Bhargav Yellepeddi**<br>Associates: Neel Rajan, Amaya Bayoumi, Ananya Ramji
+#### **Team Lead: Bhargav Yellepeddi**<br>Associates: Amaya Bayoumi, Ananya Ramji, Neel Rajan
 
 ## Introduction
 

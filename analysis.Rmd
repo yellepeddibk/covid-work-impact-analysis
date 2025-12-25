@@ -1,9 +1,11 @@
 ---
-output: github_document
+output:
+  github_document:
+    html_preview: false
 ---
 
 # Final Project  
-### **Authors:** Bhargav Yellepeddi, Neel Rajan, Ananya Ramji, Amaya Bayoumi  
+### **Authors:** Bhargav Yellepeddi, Amaya Bayoumi, Ananya Ramji, Neel Rajan
 **Date:** December 17, 2024  
 
 ```{r setup, include=FALSE}
@@ -80,9 +82,7 @@ summary(data_clean)
 ```
 
 #### Question 1: What cleaning methods were applied, and why?
-```{r}
-# The data cleaning process involved several key steps to ensure accuracy and consistency. Missing values in Productivity_Change were replaced with the mean, while missing values in categorical data like Work_From_Home were replaced with the mode to preserve dataset integrity. The Productivity_Change column was converted to numeric format to enable accurate calculations, and duplicates were removed to avoid over-representation. Outliers were identified using the IQR method, ensuring their impact could be assessed in the analysis. Rows with invalid or missing values in critical columns were filtered out to maintain data reliability. These steps ensured a clean dataset, enabling accurate trend analysis and clear visualizations of productivity changes across factors such as sector, work arrangements, stress levels, and childcare responsibilities.
-```
+The data cleaning process involved several key steps to ensure accuracy and consistency. Missing values in Productivity_Change were replaced with the mean, while missing values in categorical data like Work_From_Home were replaced with the mode to preserve dataset integrity. The Productivity_Change column was converted to numeric format to enable accurate calculations, and duplicates were removed to avoid over-representation. Outliers were identified using the IQR method, ensuring their impact could be assessed in the analysis. Rows with invalid or missing values in critical columns were filtered out to maintain data reliability. These steps ensured a clean dataset, enabling accurate trend analysis and clear visualizations of productivity changes across factors such as sector, work arrangements, stress levels, and childcare responsibilities.
 
 ## Dataset Facts
 ```{r}
@@ -270,8 +270,8 @@ ggplot(sector_analysis, aes(x = reorder(Sector, -Average_Productivity_Change), y
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
   }
 } 
-#The analysis reveals consistent productivity changes across sectors, with average values ranging narrowly from 0.496 (Retail) to 0.508 (Education). Education and IT demonstrate slightly higher productivity changes, possibly reflecting their better adaptation to shifts in work dynamics, such as remote work compatibility. Healthcare shows balanced productivity with an average of 0.500, reflecting its essential and stable operations. Retail lags behind, with the lowest average (0.496) and a median of 0, suggesting significant challenges in adjusting to external factors like COVID-19. The robust and balanced sample sizes across sectors ensure the trends are representative. Overall, Education and IT show slight outperformance, Healthcare demonstrates resilience, and Retail faces notable productivity challenges.
 ```
+The analysis reveals consistent productivity changes across sectors, with average values ranging narrowly from 0.496 (Retail) to 0.508 (Education). Education and IT demonstrate slightly higher productivity changes, possibly reflecting their better adaptation to shifts in work dynamics, such as remote work compatibility. Healthcare shows balanced productivity with an average of 0.500, reflecting its essential and stable operations. Retail lags behind, with the lowest average (0.496) and a median of 0, suggesting significant challenges in adjusting to external factors like COVID-19. The robust and balanced sample sizes across sectors ensure the trends are representative. Overall, Education and IT show slight outperformance, Healthcare demonstrates resilience, and Retail faces notable productivity challenges.
 
 #### Question 3:  What is the impact of working from home on productivity change? - Sector & Working from Home
 ```{r}
