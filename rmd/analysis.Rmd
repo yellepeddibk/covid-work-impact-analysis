@@ -27,7 +27,7 @@ library(tidyr)
 
 ```{r}
 # Read the CSV file
-data <- read_csv("data/covid_impact_on_work.csv")
+data <- read_csv("../data/covid_impact_on_work.csv")
 
 # View the data 
 head(data)

@@ -403,7 +403,7 @@ of the people.
 
 #### Question 2: What is the distribution of the “Productivity_Change” and “Stress_Level” Variables?
 
-![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 Initially, we used a standard distribution graph to depict our binary
 data. However, we soon realized that this was an incorrect choice, as
@@ -417,7 +417,7 @@ even split between individuals who felt a shift in productivity and
 those who did not. We will delve deeper into these we will further see
 where the changes occur. Now, let’s see the Stress_Level:
 
-![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 The Stress_Level variable is different from the Productivity_Change
 variable in that it is not binary, but rather categorical. It made the
@@ -434,7 +434,7 @@ what methods work in events like pandemics to minimize stress.
 
 ##### Stress Level & Working from Home:
 
-![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 The graph shows the distribution of stress levels among employees,
 segmented by their work arrangement (working from home or on-site).
@@ -446,7 +446,7 @@ the prevalence of stress levels regardless of work arrangement.
 
 ##### Sector:
 
-![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 The graph displays the average productivity change by sector during
 COVID-19. Education (0.508) and IT (0.505) report the highest changes,
@@ -458,9 +458,9 @@ due to the essential nature of their operations.
 
 ##### Sector & Working from Home:
 
-![](README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-14-2.png)<!-- -->
 
 The analysis shows that the number of reported productivity changes
 varies by sector and work arrangement. Across all sectors, remote
@@ -482,9 +482,9 @@ during pandemic-like disruptions.
 
 ##### Childcare Responsibilities & Working from Home:
 
-![](README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-15-2.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-15-2.png)<!-- -->
 
 The graphs show the relationship between productivity changes and
 childcare responsibilities for employees working from home versus
@@ -508,7 +508,7 @@ settings, may influence productivity.
 
 ##### Health Issues & Working from Home:
 
-![](README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 Employees without health issues (Health Issue = 0) reported slightly
 more productivity changes when working on-site (0.51) compared to remote
@@ -520,7 +520,7 @@ remains relatively stable for this group.
 
 #### Question 4: How does Stress_Level impact Productivity_Change when and when not working from Home?
 
-![](README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 The graph shows how stress levels and work arrangements relate to
 productivity changes.
@@ -580,9 +580,9 @@ Both groups maintained similar productivity levels.
 
 #### Question 6: What was the impact of Childcare Responsibilities, Commuting Changes, and Health Issues on Technology Adaptation Levels
 
-![](README_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-19-2.png)<!-- -->
+![](../README_files/figure-gfm/unnamed-chunk-19-2.png)<!-- -->
 
 Employees without health issues had the highest technology adaptation
 level of 0.626 when they had childcare responsibilities and no commuting
