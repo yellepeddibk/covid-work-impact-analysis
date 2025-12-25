@@ -1,14 +1,14 @@
 
 # COVID Work Impact Analysis
 
-#### **Team Lead: Bhargav Yellepeddi**<br>Associates: Amaya Bayoumi, Ananya Ramji, Neel Rajan
+#### **Team Lead: Bhargav Yellepeddi**<br>Team Members: Amaya Bayoumi, Ananya Ramji, Neel Rajan
 
 ## Introduction
 
 In this analysis, we explore a dataset detailing information about how
 covid had an impact on people’s work lives.
 
-The goal of this project is to explore how Pandemics like COVID can
+The goal of this project is to explore how pandemics like COVID can
 impact various aspects of our lives. When the COVID-19 Pandemic
 occurred, society as a whole was not at all prepared on how to react,
 which caused lots of famine in many counties and sent the world into
@@ -55,9 +55,9 @@ better understand how to prepare for them.
 
 ### Structure
 
-    The link to the data set is the following: https://www.kaggle.com/datasets/willianoliveiragibin/covid-19-on-working-professionals/data. The Kaggle website constains a CSV file containing all the data collected to detail the impact COVID had on people's work lives. There are 15 columns for 15 variables, where each variable describes a different aspect of work and whether or not it has had any change or effect from COVID. All of the data-points are neatly organized into one CSV file, where there are exactly 10,000 rows.
+    The link to the data set is the following: https://www.kaggle.com/datasets/willianoliveiragibin/covid-19-on-working-professionals/data. The Kaggle website contains a CSV file containing all the data collected to detail the impact COVID had on people's work lives. There are 15 columns for 15 variables, where each variable describes a different aspect of work and whether or not it has had any change or effect from COVID. All of the data-points are neatly organized into one CSV file, where there are exactly 10,000 rows.
 
-    One of the most important things to note about this dataset is that fact that most of the variables report their data in a binary format. In other words, most of the data is listed in 0's and 1's, where 0 conveys that the given data-point has not been effected or changed for its given variable/column, while 1 conveys that it has. Although this may seem subtle, this has lead to a variety of issues and mis-interpretations throughout this project, which have been since fixed of course. 
+    One of the most important things to note about this dataset is that fact that most of the variables report their data in a binary format. In other words, most of the data is listed in 0's and 1's, where 0 conveys that the given data-point has not been affected or changed for its given variable/column, while 1 conveys that it has. Although this may seem subtle, this has lead to a variety of issues and mis-interpretations throughout this project, which have been since fixed of course. 
 
     Where normally graphs depict the amount of change a variable has had, binary-based variables will depict whether or not there was any change and how much of the data has changed. When it comes to this project specifically, this is actually a valid approach as all we need to see is what variables changed in response to COVID-19. The variables that had less change indicate that they are more resilient and are of less worry, whereas the variables that have a higher proportion of change are the ones that indicate the need for more caution and preparation.
 
@@ -190,17 +190,17 @@ summary(data)  # Summary statistics
 
 The summary statistics tells us quite a few things. One of the key
 pieces of information to take away is the proportion of data-points that
-were effected by their respective variables. This mainly applies to the
+were affected by their respective variables. This mainly applies to the
 binary/numeric variable types as the character types simply list that
 they are characters. The binary types, on the other hand, show their
-mean values, which represents the proportion of data that was effected
+mean values, which represents the proportion of data that was affected
 in their column. For example, the “Job_Security” column lists a 0.4049
 value for the mean, which means that around 40% of the people in the
 data set experienced an impact or change to their job securities during
-COVID. This indicates that job securtity was more stable than not for
-the average person during the pandemic. In contrast,
+COVID. This indicates that job security was more stable than not for the
+average person during the pandemic. In contrast,
 “Team_Collaboration_Challenges” lists a mean value of 0.7006, meaning
-that 70% of people in the dataset experinced team collaboration
+that 70% of people in the dataset experienced team collaboration
 challenges, indicating that this aspect is vulnerable to Pandmeic-like
 events. Overall, this information alone provides valuable insights and
 can allow society to better prepare for future events.
@@ -271,7 +271,7 @@ except the Hours_Worked_Per_Day and Meetings_Per_Day columns, all column
 indicate that they only have the data types they should have, such as
 binary variables only have binary types. That of course leaves us with
 the need to fix the Hours_Worked_Per_Day and Meetings_Per_Day columns.
-The way the data is inputed in these columns is very interesting; it is
+The way the data is input in these columns is very interesting; it is
 most likely formatted in a different countries numeric system,
 especially with the number of decimals - ex. “6.392.393.639.805.820”. At
 first, we thought that maybe each input was representing multiple days
@@ -283,7 +283,7 @@ inputted without any sort of rounding, resulting in the long floating
 values we see. However, after even further analysis, we found a negative
 value inputted into the “Meetings_Per_Day” column:
 -5.829.769.194.792.650. At this point, we could not find any reasoning
-or explanattion that clarifies how this value could exist; it is not
+or explanation that clarifies how this value could exist; it is not
 possible to have negative meetings in a day. With seeing the unsusally
 decimal input and the anomoly of negative meetings, we finally decided
 that it was best to completely remove both these columns from the
@@ -350,7 +350,7 @@ variables for 13 columns.
 
 As shown above, each column lists the unique values that we expect to
 see, where binary variables only have 0’s and 1’s, as they should, while
-the character variables have their proper resepctive labels. At this
+the character variables have their proper respective labels. At this
 point, the data has been cleaned and we are ready to proceed with
 further analysis.
 
